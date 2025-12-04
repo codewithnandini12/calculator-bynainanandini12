@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    background: #777;  /* Grey background similar to image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    width: 330px;
+    background: #1c1c1c;  /* Dark calculator */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.display-area {
+    margin-bottom: 15px;
+}
+
+.history-label {
+    font-size: 12px;
+    color: #bbbbbb;
+    margin-bottom: 5px;
+}
+
+#display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    text-align: right;
+    font-size: 35px;
+    padding: 10px 0;
+    outline: none;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* General button style */
+.buttons button {
+    height: 65px;
+    border: none;
+    border-radius: 40px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.15s ease-in-out;
+}
+
+/* Number Buttons */
+.buttons button:not(.op):not(.equal) {
+    background: white;
+    color: black;
+}
+
+/* Operator Buttons */
+.op {
+    background: #f4a100;
+    color: black;
+}
+
+/* Equal Button */
+.equal {
+    background: #f4a100;
+    color: black;
+}
+
+/* Hover effect */
+.buttons button:hover {
+    transform: scale(1.06);
+}
+
+/* Press effect */
+.buttons button:active {
+    transform: scale(0.92);
+}
